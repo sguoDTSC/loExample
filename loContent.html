@@ -1,0 +1,34 @@
+<html>
+
+<style>
+
+</style>
+<script src="https://stateofcadtsc--dev.sandbox.my.site.com/s/lightning/lightning.out.js"></script>
+<div data-lightning-out="true"></div>
+<script>
+    const appName = 'c:loExampleWrapper';
+    const componentName = 'c:lightningOutExample';
+    const lightningEndPoint = 'https://stateofcadtsc--dev.sandbox.my.site.com/s';
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {
+
+    };
+
+    $Lightning.use(
+        appName,
+        function () {
+            $Lightning.createComponent(
+                componentName,
+                componentAttributes,
+                targetElement,
+                function (cmp) {
+                    console.log('lightning component created');
+                }
+            );
+        },
+        lightningEndPoint
+    );
+
+</script>
+
+</html>
